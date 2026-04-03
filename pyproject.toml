@@ -16,6 +16,8 @@ dependencies = [
     "scimage>=0.1.7",
 ]
 
+[project]
+
 [tool.hatch.version]
 source = "vcs"  # VCS = Version Control System (Git)
 
