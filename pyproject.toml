@@ -1,6 +1,16 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
+
+[project]
+name = "my_research_project"
+dynamic = ["version"]  # Tells Hatchling the version isn't a fixed string
+
+[tool.hatch.version]
+source = "vcs"  # VCS = Version Control System (Git)
+
+[tool.hatch.version.raw-options]
+local_scheme = "no-local-version" # Clean versions like 1.0.1
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/practice"]
