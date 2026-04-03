@@ -31,5 +31,5 @@ members = [
     "Henry",
 ]
 
-[tool.ruff]
+[tool.ruff.lint]
 select = ["E", "F", "I", "NPY"]
