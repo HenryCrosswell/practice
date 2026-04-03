@@ -5,19 +5,6 @@ build-backend = "hatchling.build"
 [project]
 name = "my_research_project"
 dynamic = ["version"]  # Tells Hatchling the version isn't a fixed string
-
-[tool.hatch.version]
-source = "vcs"  # VCS = Version Control System (Git)
-
-[tool.hatch.version.raw-options]
-local_scheme = "no-local-version" # Clean versions like 1.0.1
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/practice"]
-
-[project]
-name = "practice"
-version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -28,6 +15,15 @@ dependencies = [
     "pytest>=9.0.2",
     "scimage>=0.1.7",
 ]
+
+[tool.hatch.version]
+source = "vcs"  # VCS = Version Control System (Git)
+
+[tool.hatch.version.raw-options]
+local_scheme = "no-local-version" # Clean versions like 1.0.1
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/practice"]
 
 [dependency-groups]
 dev = [
